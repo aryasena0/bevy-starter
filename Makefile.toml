@@ -1,0 +1,14 @@
+# build the project with dynamic linking enabled
+[tasks.build]
+command = "cargo"
+args = ["build", "--features", "bevy/dynamic_linking"]
+
+# run the project with dynamic linking enabled
+[tasks.run]
+command = "cargo"
+args = ["run", "--features", "bevy/dynamic_linking"]
+
+# run the project with dynamic linking enabled and watch for changes
+[tasks.dev]
+command = "cargo"
+args = ["watch", "-cx", "run", "--features", "bevy/dynamic_linking"]
